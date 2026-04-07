@@ -170,16 +170,24 @@ export default function Home() {
             ))}
           </nav>
 
-          <a
-            href="tel:8706790131"
-            className="hidden sm:flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
-          >
-            <IconPhone /> 870-679-0131
-          </a>
+          <div className="hidden sm:flex items-center gap-5">
+            <a
+              href="mailto:drew@flippolandandwildlife.com"
+              className="text-[13px] font-semibold text-amber-500 transition hover:text-amber-400"
+            >
+              drew@flippolandandwildlife.com
+            </a>
+            <a
+              href="tel:8706790131"
+              className="flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
+            >
+              <IconPhone /> 870-679-0131
+            </a>
+          </div>
 
           {/* Mobile: just the number */}
           <a href="tel:8706790131" className="sm:hidden text-[13px] font-bold text-amber-400">
-            Call
+            870-679-0131
           </a>
         </div>
 
@@ -208,9 +216,6 @@ export default function Home() {
                 Arkansas Land &amp; Wildlife Management
               </span>
               <div className="h-px flex-1 bg-white/10" />
-              <a href="mailto:drew@flippolandandwildlife.com" className="flex items-center gap-2 text-[13px] font-bold text-amber-500 transition hover:text-amber-400">
-                <IconMail /> drew@flippolandandwildlife.com
-              </a>
             </div>
 
             {/* Main hero content */}
