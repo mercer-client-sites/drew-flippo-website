@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Flippo Land & Wildlife Solutions",
+  title: "Flippo Land & Wildlife Solutions | Arkansas Land & Wildlife Management",
   description:
-    "Serving Arkansas landowners with management plans, timber stand improvement, prescribed fire, habitat enhancement, and land clearing.",
+    "Arkansas land and wildlife management experts. Timber stand improvement, prescribed burning, food plots, land clearing, GTR builds, and wildlife habitat consulting for deer, turkey, and duck. Serving Arkansas landowners.",
 };
 
 export default function RootLayout({
