@@ -173,9 +173,9 @@ export default function Home() {
           <div className="hidden sm:flex items-center gap-5">
             <a
               href="mailto:drew@flippolandandwildlife.com"
-              className="text-[13px] font-semibold text-amber-500 transition hover:text-amber-400"
+              className="flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
             >
-              drew@flippolandandwildlife.com
+              <IconMail /> drew@flippolandandwildlife.com
             </a>
             <a
               href="tel:8706790131"
