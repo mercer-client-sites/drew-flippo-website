@@ -208,7 +208,7 @@ export default function Home() {
                 Arkansas Land &amp; Wildlife Management
               </span>
               <div className="h-px flex-1 bg-white/10" />
-              <a href="mailto:drew@flippolandandwildlife.com" className="flex items-center gap-2 text-[12px] text-white/35 transition hover:text-white/60">
+              <a href="mailto:drew@flippolandandwildlife.com" className="flex items-center gap-2 text-[13px] font-bold text-amber-500 transition hover:text-amber-400">
                 <IconMail /> drew@flippolandandwildlife.com
               </a>
             </div>
