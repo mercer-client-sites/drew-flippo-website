@@ -194,15 +194,16 @@ const services = [
     title: "Timber Stand Improvement (TSI)",
     slug: "tsi",
     summary:
-      "One of the most valuable investments a landowner can make for wildlife habitat and long-term property health. TSI removes low-value trees to promote the strongest, healthiest timber — improving deer habitat, turkey habitat, and duck habitat in timber.",
+      "Remove low-value trees and promote the strongest timber on your property. Improves deer, turkey, and duck habitat while building long-term property value.",
     bullets: ["Hack and squirt", "Tree girdling", "Cut and drop"],
   },
   {
     icon: <IconFire />,
     title: "Prescribed Burning",
     slug: "prescribed-burning",
+
     summary:
-      "Prescribed fire is one of the most effective tools for managing undergrowth, improving native habitat, and promoting plant diversity for wildlife. We conduct burns safely and efficiently, and we are fully insured for added peace of mind.",
+      "One of the most powerful tools for improving native habitat and wildlife diversity. We conduct safe, efficient burns and are fully insured for your peace of mind.",
     bullets: [
       "Improves deer, turkey, and quail habitat",
       "Promotes native plant diversity",
@@ -214,7 +215,7 @@ const services = [
     title: "Firebreak Installation",
     slug: "firebreaks",
     summary:
-      "Proper firebreaks are essential for any safe prescribed burn program. We use a variety of equipment to build dependable firebreaks that protect your property and allow burns to be conducted more safely and effectively.",
+      "Dependable firebreaks are the foundation of any safe burn program. We build them right so your property is protected and burns run smoothly.",
     bullets: [
       "Mechanical and hand-cut firebreaks",
       "Compatible with all terrain types",
@@ -226,7 +227,7 @@ const services = [
     title: "Land Clearing",
     slug: "land-clearing",
     summary:
-      "Land clearing improves access, usability, and wildlife habitat across the property. Whether you need better movement through the land or want to open new areas for wildlife activity, we design and complete the work to support your long-term goals.",
+      "Improve access, usability, and wildlife movement across your property. We design and complete the work with your long-term habitat goals in mind.",
     bullets: ["Access trails", "Food plot clearing and preparation"],
   },
   {
@@ -234,7 +235,7 @@ const services = [
     title: "Consulting",
     slug: "consulting",
     summary:
-      "Ideal for landowners who want to handle much of the work themselves but need a professional plan and expert guidance. We develop clear strategies for improving wildlife habitat and land productivity, and we can help navigate government cost-share programs.",
+      "Get a professional plan and expert guidance without handing over every task. We also help identify government cost-share programs your property may qualify for.",
     bullets: [
       "Land management planning",
       "Wildlife habitat plans",
@@ -247,7 +248,7 @@ const services = [
     title: "Food Plots",
     slug: "food-plots",
     summary:
-      "We design and establish food plots for fall and summer seasons with a strong emphasis on soil health and long-term productivity. Healthy soil is the foundation for sustainable food plots that support deer, turkey, and waterfowl year after year.",
+      "Fall and summer food plots designed around soil health and long-term productivity. Healthy soil builds sustainable plots that hold deer, turkey, and waterfowl year after year.",
     bullets: [
       "Fall and summer food plots",
       "Soil-focused planning and improvement",
@@ -259,7 +260,7 @@ const services = [
     title: "GTR Builds",
     slug: "gtr-builds",
     summary:
-      "For landowners who love duck hunting in flooded timber, we design and build GTR systems using advanced GPS and mapping software. We lay out levees and water-control structures to hold water during duck season and remove it efficiently to protect timber health.",
+      "Design and build GTR systems for duck hunting in flooded timber. GPS-based levee and water-control layouts that hold water in season and drain it off-season to protect your timber.",
     bullets: [
       "Water control structures",
       "Levee builds",
@@ -272,22 +273,22 @@ const whyPoints = [
   {
     icon: <IconUsers />,
     title: "One-Stop Shop",
-    body: "From the initial management plan to completing the work and managing the property afterward, we handle everything under one roof — no need to coordinate multiple contractors.",
+    body: "Plan, build, manage — all under one roof. No juggling multiple contractors.",
   },
   {
     icon: <IconStar />,
-    title: "Long-Term Results",
-    body: "We focus on quality and management strategies that continue to work well years after the initial project is complete. No quick fixes, no cutting corners.",
+    title: "Built to Last",
+    body: "We focus on strategies that keep working years after the initial project is done. No quick fixes.",
   },
   {
     icon: <IconMap />,
-    title: "Expert-Level Knowledge",
-    body: "We've worked alongside some of the top wildlife biologists in the country and consulted on properties across multiple regions — bringing that experience directly to your land.",
+    title: "Expert Knowledge",
+    body: "We've worked alongside top wildlife biologists and consulted on properties across multiple regions.",
   },
   {
     icon: <IconShield />,
-    title: "Insured & Professional",
-    body: "Fully insured for all services we provide, including prescribed burns. You get professional-grade work with the accountability your property deserves.",
+    title: "Licensed & Insured",
+    body: "Fully insured for every service, including prescribed burns. Professional work with full accountability.",
   },
 ];
 
@@ -384,40 +385,52 @@ export default function Home() {
           <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_60%_0%,_rgba(202,184,130,0.18),_transparent_55%),linear-gradient(175deg,rgba(14,31,20,0.6),rgba(14,31,20,1)_70%)]" />
           <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02)_1px,transparent_1px,transparent_5px)]" />
 
-          <div className="mx-auto grid min-h-[92vh] w-full max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-12 lg:py-28">
+          <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16 lg:px-12 lg:py-24 min-h-[88vh]">
             {/* Left */}
             <div>
-              <p className="mb-6 text-xs font-bold tracking-[0.32em] text-amber-400 uppercase">
+              <p className="mb-5 text-[11px] font-bold tracking-[0.32em] text-amber-400 uppercase">
                 Arkansas Land &amp; Wildlife Management
               </p>
-              <h1 className="font-heading text-5xl leading-[1.05] text-balance sm:text-6xl lg:text-7xl">
-                Improve your land.
+              <h1 className="font-heading text-5xl leading-[1.05] text-balance sm:text-6xl lg:text-[4.25rem]">
+                Your land.
                 <br />
-                <span className="text-amber-300">Build better habitat.</span>
+                <span className="text-amber-300">Managed right.</span>
               </h1>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70">
-                Flippo Land and Wildlife Solutions helps Arkansas landowners
-                develop and manage exceptional properties for deer, turkey,
-                ducks, and more — from the initial plan to the finished product.
+              <p className="mt-6 max-w-lg text-[1.0625rem] leading-[1.75] text-white/65">
+                Flippo Land and Wildlife Solutions works with Arkansas
+                landowners to build better habitat, improve their timber, and
+                manage properties for deer, turkey, ducks, and more.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-9 flex flex-wrap gap-3">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-7 py-3.5 text-sm font-extrabold tracking-[0.15em] text-forest-950 uppercase transition hover:bg-amber-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-8 py-4 text-sm font-extrabold tracking-[0.12em] text-forest-950 uppercase shadow-lg shadow-amber-400/20 transition hover:bg-amber-300 hover:shadow-amber-300/30"
                 >
                   Get a Free Consultation
                 </a>
                 <a
-                  href="#services"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/8"
+                  href="tel:8706790131"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/8"
                 >
-                  View Services <IconArrowRight />
+                  <IconPhone /> Call Now
                 </a>
               </div>
 
-              {/* Quick contact strip */}
-              <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-8 text-sm text-white/50">
+              {/* Habitat target badges */}
+              <div className="mt-10 flex flex-wrap gap-2">
+                {["Deer Habitat", "Turkey Habitat", "Duck Habitat", "Timber Management", "Food Plots", "GTR Builds"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-white/50"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Contact strip */}
+              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2.5 border-t border-white/10 pt-8 text-[13px] text-white/40">
                 <a href="tel:8706790131" className="flex items-center gap-2 transition hover:text-amber-300">
                   <IconPhone /> 870-679-0131
                 </a>
@@ -431,22 +444,28 @@ export default function Home() {
             </div>
 
             {/* Right — service quick-list card */}
-            <aside className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-[0_32px_80px_rgba(0,0,0,0.4)] backdrop-blur-sm sm:p-9">
-              <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/50 to-transparent" />
-              <p className="text-[10px] font-bold tracking-[0.3em] text-amber-400 uppercase">
-                Services
+            <aside className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_32px_80px_rgba(0,0,0,0.4)] backdrop-blur-sm sm:p-8">
+              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent" />
+              <p className="text-[10px] font-bold tracking-[0.32em] text-amber-400 uppercase">
+                What We Do
               </p>
-              <ul className="mt-5 space-y-2.5">
+              <ul className="mt-4 space-y-2">
                 {services.map((s) => (
                   <li
                     key={s.slug}
-                    className="flex items-center gap-3 rounded-xl border border-white/6 bg-black/15 px-5 py-3.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                    className="flex items-center gap-3 rounded-xl border border-white/6 bg-black/15 px-4 py-3 text-[13px] font-semibold text-white/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                   >
-                    <span className="text-amber-400/80">{s.icon}</span>
+                    <span className="text-amber-400/70 flex-shrink-0">{s.icon}</span>
                     {s.title}
                   </li>
                 ))}
               </ul>
+              <a
+                href="#contact"
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400/10 border border-amber-400/20 py-3 text-[13px] font-bold text-amber-300 transition hover:bg-amber-400/15"
+              >
+                Request a Consultation <IconArrowRight />
+              </a>
             </aside>
           </div>
 
@@ -455,7 +474,7 @@ export default function Home() {
         </section>
 
         {/* ── About ──────────────────────────────────────────────────────── */}
-        <section id="about" aria-label="About Flippo Land and Wildlife Solutions" className="bg-earth-50 py-24 lg:py-32">
+        <section id="about" aria-label="About Flippo Land and Wildlife Solutions" className="bg-earth-50 py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid items-center gap-16 lg:grid-cols-2">
               {/* Image */}
@@ -477,54 +496,45 @@ export default function Home() {
               {/* Text */}
               <div>
                 <SectionLabel>About Us</SectionLabel>
-                <h2 className="font-heading text-4xl leading-snug text-forest-900 sm:text-5xl">
+                <h2 className="font-heading text-4xl leading-[1.15] text-forest-900 sm:text-5xl">
                   Passionate about land.
                   <br />
                   Committed to results.
                 </h2>
 
-                <div className="mt-6 space-y-4 text-base leading-relaxed text-earth-800/75">
+                <div className="mt-6 space-y-4 text-[0.9375rem] leading-[1.8] text-earth-800/70">
                   <p>
-                    At Flippo Land and Wildlife Solutions, we are passionate
-                    about improving land for wildlife and helping landowners get
-                    the most out of their property. There is nothing better than
-                    working with a landowner from start to finish on a project
-                    and seeing the transformation take place.
+                    We are passionate about improving land for wildlife and
+                    helping landowners get the most out of their property.
+                    Every property is different, which is why we build a plan
+                    that fits your specific goals, conditions, and long-term
+                    vision — not a one-size-fits-all template.
                   </p>
                   <p>
-                    Every property is different, which is why we take the time
-                    to build a land management plan that fits each landowner's
-                    goals, property conditions, and long-term vision. Our focus
-                    is not on quick fixes or cutting corners — we prioritize
-                    quality, long-term results, and management strategies that
-                    continue to work well years after the initial project is
-                    complete.
-                  </p>
-                  <p>
-                    We are a one-stop shop for landowners who want professional
-                    help with land management, wildlife habitat improvement, and
-                    overall property improvement — from developing a plan to
-                    completing the work to helping manage the property
-                    afterward.
+                    From the first walkthrough to ongoing management, we handle
+                    everything under one roof. We stay current on the latest
+                    research and wildlife management practices so every
+                    recommendation is backed by real expertise — and we keep
+                    you informed at every step.
                   </p>
                 </div>
 
-                <div className="mt-10 grid grid-cols-3 gap-4 border-t border-earth-200 pt-8">
+                <div className="mt-10 grid grid-cols-3 gap-6 border-t border-earth-200 pt-8">
                   {[
-                    { value: "7", label: "Services Offered" },
-                    { value: "AR", label: "State Coverage" },
-                    { value: "100%", label: "Hands-On Work" },
+                    { value: "7", label: "Services" },
+                    { value: "AR", label: "Statewide" },
+                    { value: "100%", label: "Hands-On" },
                   ].map((stat) => (
                     <div key={stat.label}>
-                      <div className="font-heading text-3xl text-forest-800">{stat.value}</div>
-                      <div className="mt-1 text-xs font-semibold tracking-wide text-earth-800/50 uppercase">{stat.label}</div>
+                      <div className="font-heading text-4xl font-bold text-forest-800">{stat.value}</div>
+                      <div className="mt-1.5 text-[11px] font-bold tracking-[0.2em] text-earth-800/45 uppercase">{stat.label}</div>
                     </div>
                   ))}
                 </div>
 
                 <a
                   href="#contact"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-forest-800 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-forest-700"
+                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-forest-800 px-7 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-forest-700"
                 >
                   Start a Conversation <IconArrowRight />
                 </a>
@@ -537,40 +547,45 @@ export default function Home() {
         <section
           id="services"
           aria-label="Land and wildlife management services in Arkansas"
-          className="bg-white py-24 lg:py-32"
+          className="bg-white py-20 lg:py-28"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="mx-auto mb-16 max-w-2xl text-center">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
               <SectionLabel>What We Do</SectionLabel>
-              <h2 className="font-heading text-4xl leading-snug text-forest-900 sm:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.15] text-forest-900 sm:text-5xl">
                 Arkansas land &amp; wildlife services
               </h2>
-              <p className="mt-4 leading-relaxed text-earth-800/65">
-                Full-service land management for deer habitat, turkey habitat,
-                duck habitat, timber improvement, and everything in between.
+              <p className="mt-4 text-[0.9375rem] leading-relaxed text-earth-800/60">
+                Full-service land management for deer, turkey, duck habitat,
+                timber improvement, food plots, GTR builds, and more.
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <article
                   key={service.slug}
-                  className="group flex flex-col rounded-2xl border border-earth-100 bg-earth-50 p-7 transition-all duration-200 hover:border-forest-200 hover:bg-white hover:shadow-xl xl:p-8"
+                  className="group flex flex-col rounded-2xl border border-earth-100 bg-earth-50 p-6 transition-all duration-200 hover:border-forest-200/60 hover:bg-white hover:shadow-xl"
                 >
-                  <div className="mb-4 text-forest-700 transition-colors group-hover:text-amber-500">
-                    {service.icon}
+                  {/* Icon + title row */}
+                  <div className="mb-4 flex items-start gap-3">
+                    <div className="mt-0.5 flex-shrink-0 text-forest-700 transition-colors group-hover:text-amber-500">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-[0.9375rem] font-bold leading-snug text-forest-900">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="mb-3 text-lg font-bold text-forest-900">
-                    {service.title}
-                  </h3>
-                  <p className="mb-5 text-sm leading-relaxed text-earth-800/65 flex-1">
+
+                  <p className="text-[0.8125rem] leading-[1.7] text-earth-800/60 flex-1">
                     {service.summary}
                   </p>
+
                   {service.bullets.length > 0 && (
-                    <ul className="space-y-1.5">
+                    <ul className="mt-4 space-y-1.5 border-t border-earth-100 pt-4">
                       {service.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2 text-sm text-forest-700">
-                          <span className="mt-0.5 text-amber-500"><IconCheck /></span>
+                        <li key={b} className="flex items-start gap-2 text-[0.8125rem] text-forest-700/80">
+                          <span className="mt-0.5 text-amber-500 flex-shrink-0"><IconCheck /></span>
                           {b}
                         </li>
                       ))}
@@ -580,12 +595,18 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-14 text-center">
+            <div className="mt-12 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-forest-800 px-8 py-4 text-sm font-semibold tracking-wide text-white transition hover:bg-forest-700"
+                className="inline-flex items-center gap-2 rounded-full bg-forest-800 px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-md transition hover:bg-forest-700"
               >
                 Talk to Us About Your Property <IconArrowRight />
+              </a>
+              <a
+                href="tel:8706790131"
+                className="inline-flex items-center gap-2 rounded-full border border-earth-200 px-8 py-4 text-sm font-semibold text-earth-800 transition hover:border-forest-300 hover:bg-earth-100"
+              >
+                <IconPhone /> 870-679-0131
               </a>
             </div>
           </div>
@@ -595,42 +616,50 @@ export default function Home() {
         <section
           id="why"
           aria-label="Why choose Flippo Land and Wildlife Solutions"
-          className="relative isolate overflow-hidden py-24 lg:py-32"
+          className="relative isolate overflow-hidden py-20 lg:py-28"
           style={{ background: "linear-gradient(150deg,#1a3321 0%,#0e1f14 100%)" }}
         >
           <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02)_1px,transparent_1px,transparent_6px)]" />
           <div className="absolute right-0 top-0 -z-10 h-96 w-96 rounded-full bg-amber-400/5 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="mx-auto mb-16 max-w-2xl text-center">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
               <SectionLabel light>Why Flippo</SectionLabel>
-              <h2 className="font-heading text-4xl leading-snug text-white sm:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.15] text-white sm:text-5xl">
                 The difference is in how we work
               </h2>
-              <p className="mt-4 leading-relaxed text-white/55">
-                We stay current on the latest wildlife research and management
-                practices so you get the most effective solutions for your
-                specific property.
+              <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/50">
+                We stay current on the latest research and management practices
+                to bring you the most effective solutions for your land.
               </p>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {whyPoints.map((point) => (
                 <div
                   key={point.title}
-                  className="rounded-2xl border border-white/8 bg-white/4 p-7 backdrop-blur-sm"
+                  className="rounded-2xl border border-white/8 bg-white/4 p-6 backdrop-blur-sm"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/12 text-amber-400">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-400/12 text-amber-400">
                     {point.icon}
                   </div>
-                  <h3 className="mb-3 text-lg font-bold text-white">
+                  <h3 className="mb-2 text-[0.9375rem] font-bold text-white">
                     {point.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-white/55">
+                  <p className="text-[0.8125rem] leading-[1.7] text-white/50">
                     {point.body}
                   </p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-8 py-4 text-sm font-extrabold tracking-[0.12em] text-forest-950 uppercase shadow-lg shadow-amber-400/20 transition hover:bg-amber-300"
+              >
+                Get a Free Consultation <IconArrowRight />
+              </a>
             </div>
           </div>
         </section>
@@ -639,34 +668,33 @@ export default function Home() {
         <section
           id="process"
           aria-label="Our land management process"
-          className="bg-earth-50 py-24 lg:py-32"
+          className="bg-earth-50 py-20 lg:py-28"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="mx-auto mb-16 max-w-2xl text-center">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
               <SectionLabel>How It Works</SectionLabel>
-              <h2 className="font-heading text-4xl leading-snug text-forest-900 sm:text-5xl">
-                A clear process from start to finish
+              <h2 className="font-heading text-4xl leading-[1.15] text-forest-900 sm:text-5xl">
+                A clear process, start to finish
               </h2>
-              <p className="mt-4 leading-relaxed text-earth-800/65">
-                We believe landowners should understand every step of the
-                plan. Here's how we work.
+              <p className="mt-4 text-[0.9375rem] leading-relaxed text-earth-800/60">
+                We believe landowners should understand every step of the plan.
+                Here's how we work.
               </p>
             </div>
 
             <div className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Connector line (desktop only) */}
-              <div className="absolute left-0 right-0 top-8 hidden h-px bg-earth-200 lg:block" style={{ left: "12.5%", right: "12.5%" }} />
+              {/* Connector line — desktop only, sits at center of step circles */}
+              <div className="absolute top-[1.875rem] hidden h-px bg-earth-200 lg:block" style={{ left: "calc(12.5% + 1.875rem)", right: "calc(12.5% + 1.875rem)" }} />
 
               {processSteps.map((step) => (
                 <div key={step.number} className="relative flex flex-col">
-                  {/* Step number circle */}
-                  <div className="relative z-10 mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-amber-400 bg-white font-heading text-2xl font-bold text-forest-900 shadow-md">
+                  <div className="relative z-10 mb-5 flex h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full border-2 border-amber-400 bg-white font-heading text-xl font-bold text-forest-900 shadow-md">
                     {step.number}
                   </div>
-                  <h3 className="mb-3 text-lg font-bold text-forest-900">
+                  <h3 className="mb-2.5 text-[0.9375rem] font-bold text-forest-900">
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-earth-800/65">
+                  <p className="text-[0.8125rem] leading-[1.7] text-earth-800/60">
                     {step.body}
                   </p>
                 </div>
@@ -679,15 +707,15 @@ export default function Home() {
         <section
           id="gallery"
           aria-label="Previous land management and wildlife habitat projects"
-          className="bg-white py-24 lg:py-32"
+          className="bg-white py-20 lg:py-28"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="mx-auto mb-16 max-w-2xl text-center">
+            <div className="mx-auto mb-14 max-w-2xl text-center">
               <SectionLabel>Previous Work</SectionLabel>
-              <h2 className="font-heading text-4xl leading-snug text-forest-900 sm:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.15] text-forest-900 sm:text-5xl">
                 Results on the ground
               </h2>
-              <p className="mt-4 leading-relaxed text-earth-800/65">
+              <p className="mt-4 text-[0.9375rem] leading-relaxed text-earth-800/60">
                 A look at some of the Arkansas properties and projects we've
                 had the privilege of working on.
               </p>
