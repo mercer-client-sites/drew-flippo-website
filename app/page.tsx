@@ -49,6 +49,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Our Work", href: "#gallery" },
+  { label: "Meet Drew", href: "/about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -589,7 +590,14 @@ export default function Home() {
               {/* Form */}
               <div>
                 <h3 className="font-heading text-2xl text-white mb-7">Send us a message</h3>
-                <form className="space-y-5" aria-label="Contact form">
+                <form
+                  action="https://formsubmit.co/drew@flippolandandwildlife.com"
+                  method="POST"
+                  className="space-y-5"
+                  aria-label="Contact form"
+                >
+                  <input type="hidden" name="_subject" value="New quote request from Flippo website" />
+                  <input type="hidden" name="_captcha" value="false" />
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label htmlFor="firstName" className="block text-[10px] font-bold tracking-[0.25em] text-white/40 uppercase mb-2">
@@ -597,6 +605,7 @@ export default function Home() {
                       </label>
                       <input
                         id="firstName"
+                        name="firstName"
                         type="text"
                         placeholder="John"
                         className="w-full border border-white/12 bg-white/6 px-4 py-3 text-sm text-white placeholder:text-white/18 focus:border-amber-500/40 focus:outline-none"
@@ -608,6 +617,7 @@ export default function Home() {
                       </label>
                       <input
                         id="lastName"
+                        name="lastName"
                         type="text"
                         placeholder="Smith"
                         className="w-full border border-white/12 bg-white/6 px-4 py-3 text-sm text-white placeholder:text-white/18 focus:border-amber-500/40 focus:outline-none"
@@ -621,6 +631,7 @@ export default function Home() {
                     </label>
                     <input
                       id="phone"
+                      name="phone"
                       type="tel"
                       placeholder="870-000-0000"
                       className="w-full border border-white/12 bg-white/6 px-4 py-3 text-sm text-white placeholder:text-white/18 focus:border-amber-500/40 focus:outline-none"
@@ -633,6 +644,7 @@ export default function Home() {
                     </label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="you@example.com"
                       className="w-full border border-white/12 bg-white/6 px-4 py-3 text-sm text-white placeholder:text-white/18 focus:border-amber-500/40 focus:outline-none"
@@ -645,6 +657,7 @@ export default function Home() {
                     </label>
                     <select
                       id="service"
+                      name="service"
                       defaultValue=""
                       className="w-full appearance-none border border-white/12 bg-white/6 px-4 py-3 text-sm text-white/70 focus:border-amber-500/40 focus:outline-none"
                     >
@@ -662,6 +675,7 @@ export default function Home() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
                       placeholder="Acreage, county, goals — deer, turkey, ducks, timber, food plots…"
                       className="w-full resize-none border border-white/12 bg-white/6 px-4 py-3 text-sm text-white placeholder:text-white/18 focus:border-amber-500/40 focus:outline-none"
