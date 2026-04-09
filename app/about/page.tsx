@@ -96,7 +96,7 @@ export default function AboutPage() {
             </span>
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -112,20 +112,12 @@ export default function AboutPage() {
             ))}
           </nav>
 
-          <div className="hidden sm:flex items-center gap-5">
-            <a
-              href="mailto:drew@flippolandandwildlife.com"
-              className="flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
-            >
-              <IconMail /> drew@flippolandandwildlife.com
-            </a>
-            <a
-              href="tel:8706790131"
-              className="flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
-            >
-              <IconPhone /> 870-679-0131
-            </a>
-          </div>
+          <a
+            href="tel:8706790131"
+            className="hidden sm:flex items-center gap-2 bg-amber-500 px-4 py-2 text-[13px] font-bold text-forest-950 transition hover:bg-amber-400"
+          >
+            <IconPhone /> 870-679-0131
+          </a>
 
           <a href="tel:8706790131" className="sm:hidden text-[13px] font-bold text-amber-400">
             870-679-0131
