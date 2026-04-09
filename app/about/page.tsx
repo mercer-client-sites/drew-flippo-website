@@ -172,9 +172,9 @@ export default function AboutPage() {
                   <span className="text-amber-400">Flippo.</span>
                 </h1>
                 <p className="mt-6 text-[1.0625rem] leading-[1.75] text-white/55 max-w-xl">
-                  Wildlife biologist. Land manager. Founder of Flippo Land &amp; Wildlife Solutions.
-                  A career spent in the field — on real properties, with real landowners,
-                  solving real problems.
+                  Wildlife-focused land manager. Founder of Flippo Land &amp; Wildlife Solutions.
+                  Built through hands-on field experience — working directly with landowners
+                  to solve real property challenges.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-6 border-t border-white/10 pt-8">
                   {[
