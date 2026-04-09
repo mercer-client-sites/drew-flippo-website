@@ -49,6 +49,7 @@ const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Our Work", href: "/#gallery" },
   { label: "Meet Drew", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/#contact" },
 ];
 

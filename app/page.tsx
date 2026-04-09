@@ -2,6 +2,8 @@
 // Flippo Land & Wildlife Solutions — Homepage
 // ─────────────────────────────────────────────────────────────────────────────
 
+import Image from 'next/image'
+
 // ── Icons ─────────────────────────────────────────────────────────────────────
 
 function IconPhone() {
@@ -50,6 +52,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Our Work", href: "#gallery" },
   { label: "Meet Drew", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -136,12 +139,12 @@ const processSteps = [
 ];
 
 const galleryItems = [
-  { label: "Timber Stand Improvement", tall: true },
-  { label: "Prescribed Burn", tall: false },
-  { label: "Food Plot", tall: false },
-  { label: "GTR Build", tall: false },
-  { label: "Land Clearing", tall: false },
-  { label: "Wildlife Habitat", tall: true },
+  { src: "/images/gallery/tsi/IMG_0371.JPG", alt: "Timber stand improvement", label: "TSI", tall: true },
+  { src: "/images/gallery/burns/IMG_0556.JPG", alt: "Prescribed burn", label: "Prescribed Burn", tall: false },
+  { src: "/images/gallery/trapping/IMG_4263.jpeg", alt: "Trapping", label: "Trapping", tall: false },
+  { src: "/images/gallery/drilling/IMG_0830.JPG", alt: "Drilling", label: "Drilling", tall: false },
+  { src: "/images/gallery/food-plots/IMG_4904.jpg", alt: "Food plot", label: "Food Plots", tall: false },
+  { src: "/images/gallery/burns/IMG_7861.jpeg", alt: "Prescribed burn fire line", label: "Prescribed Burn", tall: true },
 ];
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -208,9 +211,20 @@ export default function Home() {
         <section
           id="hero"
           aria-label="Arkansas land and wildlife management"
-          className="bg-forest-950 text-white"
+          className="relative bg-forest-950 text-white overflow-hidden"
         >
-          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          {/* Background video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover opacity-20"
+          >
+            <source src="/images/gallery/trapping/trapping-hero.mov" type="video/mp4" />
+          </video>
+          <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             {/* Top rule with label */}
             <div className="flex items-center gap-4 border-b border-white/10 py-5">
               <span className="text-[10px] font-bold tracking-[0.3em] text-amber-500 uppercase">
@@ -517,24 +531,41 @@ export default function Home() {
                   Results on the ground
                 </h2>
               </div>
-              <p className="text-[0.875rem] text-earth-800/45 sm:text-right">
-                Photos coming soon.
-              </p>
+              <a href="/gallery" className="text-[0.875rem] font-semibold text-amber-600 hover:text-amber-500 transition-colors">
+                View Full Gallery →
+              </a>
             </div>
 
             {/* Asymmetric grid */}
-            <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-4">
+            <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-4 auto-rows-[11rem]">
               {galleryItems.map((item, i) => (
-                <div
+                <a
                   key={i}
-                  className={`group overflow-hidden ${item.tall ? "row-span-2" : ""}`}
+                  href="/gallery"
+                  className={`group relative overflow-hidden ${item.tall ? "row-span-2" : ""}`}
                 >
-                  <ImgBlock
-                    label={item.label}
-                    className={`w-full ${item.tall ? "h-full min-h-[20rem]" : "min-h-[11rem]"}`}
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 400px"
                   />
-                </div>
+                  <div className="absolute inset-0 bg-forest-950/20 group-hover:bg-forest-950/5 transition-colors" />
+                  <span className="absolute bottom-2 left-3 text-[10px] font-bold tracking-[0.2em] text-white uppercase drop-shadow">
+                    {item.label}
+                  </span>
+                </a>
               ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <a
+                href="/gallery"
+                className="inline-block border border-earth-200 px-8 py-3 text-sm font-semibold text-earth-800 transition hover:border-amber-500 hover:text-amber-600"
+              >
+                View Full Gallery
+              </a>
             </div>
           </div>
         </section>
