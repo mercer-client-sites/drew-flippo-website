@@ -45,3 +45,53 @@ body {
 a {
   text-decoration: none;
 }
+
+/* ── Topographic texture pattern ─────────────────────────────────────────── */
+.topo-texture {
+  position: relative;
+}
+.topo-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 200c40-15 80 10 120-5s80-30 120-10 80 25 120 5' fill='none' stroke='%23000' stroke-width='0.8'/%3E%3Cpath d='M0 160c50 20 90-10 140 5s100 30 130 5 90-30 130-10' fill='none' stroke='%23000' stroke-width='0.6'/%3E%3Cpath d='M0 240c30-10 70 15 110 0s90-20 130-5 80 15 120 0' fill='none' stroke='%23000' stroke-width='0.6'/%3E%3Cpath d='M0 120c60 10 100-15 150 0s80 20 110 0 80-15 140 0' fill='none' stroke='%23000' stroke-width='0.5'/%3E%3Cpath d='M0 280c45 12 85-8 130 5s70 18 110 0 90-20 130-5' fill='none' stroke='%23000' stroke-width='0.5'/%3E%3Cpath d='M0 80c35-8 75 12 115-3s90-15 130 5 80 12 120-3' fill='none' stroke='%23000' stroke-width='0.4'/%3E%3Cpath d='M0 320c55 8 95-12 140 3s70 15 110-3 85-10 150 3' fill='none' stroke='%23000' stroke-width='0.4'/%3E%3Cpath d='M0 40c40-5 80 8 120 0s80-10 120 3 80 8 120-3' fill='none' stroke='%23000' stroke-width='0.3'/%3E%3Cpath d='M0 360c50 5 90-8 140 0s80 10 120-3 80-5 140 3' fill='none' stroke='%23000' stroke-width='0.3'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+}
+
+/* ── Film grain overlay ──────────────────────────────────────────────────── */
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ── Angled section edge ─────────────────────────────────────────────────── */
+.angle-top {
+  clip-path: polygon(0 clamp(24px, 3vw, 48px), 100% 0, 100% 100%, 0 100%);
+  margin-top: calc(-1 * clamp(24px, 3vw, 48px));
+  padding-top: clamp(24px, 3vw, 48px);
+}
+
+/* ── Rough horizontal rule ───────────────────────────────────────────────── */
+.rough-rule {
+  border: none;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-earth-200) 0px,
+    var(--color-earth-200) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.7;
+}

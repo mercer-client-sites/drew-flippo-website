@@ -62,7 +62,7 @@ const services = [
     title: "Timber Stand Improvement",
     abbr: "TSI",
     summary:
-      "Remove low-value trees and give your best timber room to grow. TSI is one of the highest-return investments a landowner can make — improving deer, turkey, and duck habitat while increasing the long-term value of the property.",
+      "Remove low-value trees and give your high quality timber room to grow. TSI is one of the highest-return investments a landowner can make — improving deer, turkey, and duck habitat while increasing the long-term value of the property.",
     bullets: ["Hack and squirt", "Tree girdling", "Cut and drop"],
   },
   {
@@ -203,19 +203,21 @@ export default function Home() {
         <section
           id="hero"
           aria-label="Arkansas land and wildlife management"
-          className="relative bg-forest-950 text-white overflow-hidden"
+          className="relative bg-forest-950 text-white overflow-hidden grain-overlay"
         >
-          {/* Background video */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          {/* Arkansas silhouette background — real state outline from GeoJSON */}
+          <svg
+            viewBox="0 0 450 350"
+            className="absolute -right-8 top-1/2 -translate-y-1/2 h-[85%] w-auto opacity-[0.12] pointer-events-none"
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover opacity-20"
+            fill="none"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
           >
-            <source src="/images/gallery/trapping/trapping-hero.mov" type="video/mp4" />
-          </video>
+            <path d="M32.0,20.0 L394.6,20.5 L402.0,37.5 L389.1,48.1 L375.8,64.6 L430.0,64.6 L427.2,81.1 L414.8,86.0 L412.1,99.6 L396.4,114.1 L397.8,135.5 L389.6,151.0 L381.3,153.4 L386.3,161.2 L373.0,168.0 L367.0,183.0 L358.3,186.9 L359.7,204.4 L344.5,209.2 L345.0,215.0 L327.5,229.6 L332.6,239.3 L317.4,253.3 L304.1,280.5 L318.8,292.2 L311.4,299.4 L316.0,317.9 L309.6,330.0 L104.6,328.5 L68.3,328.5 L68.3,281.5 L56.3,277.6 L39.8,282.0 L31.0,273.7 L35.6,118.0 L20.0,20.0 Z" />
+          </svg>
+
           <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             {/* Top rule with label */}
             <div className="flex items-center gap-4 border-b border-white/10 py-5">
@@ -225,11 +227,11 @@ export default function Home() {
               <div className="h-px flex-1 bg-white/10" />
             </div>
 
-            {/* Main hero content */}
-            <div className="py-16 sm:py-20 lg:py-28">
-              <div className="max-w-4xl">
+            {/* Main hero content — offset grid for asymmetry */}
+            <div className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:py-28">
+              <div>
                 <h1 className="font-heading text-5xl leading-[1.08] sm:text-6xl lg:text-7xl xl:text-[5rem]">
-                  Land management
+                  Habitat management
                   <br />
                   <span className="text-amber-400">built around your property.</span>
                 </h1>
@@ -244,7 +246,7 @@ export default function Home() {
                     href="#contact"
                     className="bg-amber-500 px-7 py-3.5 text-sm font-bold tracking-wide text-forest-950 transition hover:bg-amber-400"
                   >
-                    Get a Free Consultation
+                    Talk to Us
                   </a>
                   <a
                     href="#services"
@@ -254,10 +256,25 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+
+              {/* Right column — stacked stats, pulled down */}
+              <div className="hidden lg:flex flex-col gap-5 border-l border-white/10 pl-10">
+                {[
+                  { value: "7", label: "Service Areas" },
+                  { value: "AR", label: "Statewide Coverage" },
+                  { value: "TSI", label: "Timber Improvement" },
+                  { value: "GTR", label: "Flooded Timber Builds" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div className="font-heading text-2xl font-bold text-amber-400">{s.value}</div>
+                    <div className="mt-0.5 text-[11px] font-semibold tracking-[0.15em] text-white/35 uppercase">{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Bottom stats bar */}
-            <div className="grid grid-cols-2 gap-px border-t border-white/10 sm:grid-cols-4">
+            {/* Mobile stats bar */}
+            <div className="grid grid-cols-2 gap-px border-t border-white/10 sm:grid-cols-4 lg:hidden">
               {[
                 { value: "7", label: "Service Areas" },
                 { value: "AR", label: "Statewide Coverage" },
@@ -273,17 +290,63 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── Video Showcase ──────────────────────────────────────────────── */}
+        <section
+          id="in-action"
+          aria-label="Our work in the field"
+          className="relative bg-earth-900 py-20 text-white lg:py-28 topo-texture"
+        >
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            <div className="grid gap-12 lg:grid-cols-[auto_1fr] lg:gap-16 lg:items-start">
+              {/* Section label — left rail on desktop */}
+              <div className="lg:sticky lg:top-28 lg:w-48">
+                <p className="text-[10px] font-bold tracking-[0.3em] text-amber-500 uppercase mb-4">In Action</p>
+                <h2 className="font-heading text-3xl leading-[1.12] sm:text-4xl">
+                  Our work
+                  <br />
+                  in the field.
+                </h2>
+                <p className="mt-4 text-[0.8125rem] leading-relaxed text-white/40">
+                  Real footage from real properties. This is what habitat management looks like on the ground.
+                </p>
+              </div>
+
+              {/* Video area */}
+              <div className="space-y-6">
+                <div className="relative aspect-video w-full overflow-hidden bg-forest-950 border border-white/8">
+                  {/* Replace src with your actual video file */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 h-full w-full object-cover"
+                  >
+                    {/* TODO: Replace with real footage */}
+                    <source src="/images/gallery/trapping/trapping-hero.mov" type="video/mp4" />
+                  </video>
+                  {/* Subtle vignette */}
+                  <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.4)]" />
+                </div>
+                <p className="text-[11px] font-semibold tracking-[0.2em] text-white/25 uppercase">
+                  Habitat management &middot; Arkansas
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── About ─────────────────────────────────────────────────────────── */}
         <section
           id="about"
           aria-label="About Flippo Land and Wildlife Solutions"
-          className="bg-earth-50 py-20 lg:py-28"
+          className="relative bg-earth-50 py-20 lg:py-28 topo-texture"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+            <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
 
-              {/* Image */}
-              <div>
+              {/* Image — offset slightly for asymmetry */}
+              <div className="lg:-mt-4 lg:mr-4">
                 <ImgBlock label="Field Photo" className="aspect-[4/3] w-full" />
               </div>
 
@@ -301,10 +364,8 @@ export default function Home() {
                     Flippo Land and Wildlife Solutions helps Arkansas landowners
                     improve wildlife habitat, manage their property with purpose,
                     and create long-term results they can be proud of. We
-                    specialize in land management, wildlife habitat improvement,
-                    deer habitat, turkey habitat, duck habitat, timber stand
-                    improvement, prescribed burning, food plots, land clearing,
-                    and consulting.
+                    specialize in habitat improvements for deer, turkey, and
+                    waterfowl.
                   </p>
                   <p>
                     Our goal is simple: provide landowners with a clear plan,
@@ -343,10 +404,10 @@ export default function Home() {
         <section
           id="services"
           aria-label="Arkansas land and wildlife management services"
-          className="bg-white py-20 lg:py-28"
+          className="relative bg-white py-20 lg:py-28"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-            {/* Section header */}
+            {/* Section header — left-heavy with rough rule */}
             <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-[10px] font-bold tracking-[0.3em] text-amber-600 uppercase mb-4">Services</p>
@@ -355,7 +416,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-xs text-[0.875rem] leading-relaxed text-earth-800/55 sm:text-right">
-                Full-service land management for Arkansas landowners — from timber to habitat to water.
+                Full-service habitat management for Arkansas landowners.
               </p>
             </div>
 
@@ -419,7 +480,7 @@ export default function Home() {
         <section
           id="why"
           aria-label="Why choose Flippo Land and Wildlife Solutions"
-          className="bg-forest-900 py-20 text-white lg:py-28"
+          className="relative bg-forest-900 py-20 text-white lg:py-28 angle-top grain-overlay"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mb-14 max-w-xl">
@@ -465,7 +526,7 @@ export default function Home() {
                 href="#contact"
                 className="bg-amber-500 px-7 py-3.5 text-sm font-bold text-forest-950 transition hover:bg-amber-400"
               >
-                Get a Free Consultation
+                Start a Conversation
               </a>
             </div>
           </div>
@@ -475,7 +536,7 @@ export default function Home() {
         <section
           id="process"
           aria-label="Land management process"
-          className="bg-earth-50 py-20 lg:py-28"
+          className="relative bg-earth-50 py-20 lg:py-28 topo-texture"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mb-14 max-w-xl">
@@ -513,9 +574,11 @@ export default function Home() {
         <section
           id="gallery"
           aria-label="Land management and wildlife habitat projects in Arkansas"
-          className="bg-white py-20 lg:py-28"
+          className="relative bg-white py-20 lg:py-28"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+            {/* Rough rule separator */}
+            <hr className="rough-rule mb-14" />
             <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-[10px] font-bold tracking-[0.3em] text-amber-600 uppercase mb-4">Previous Work</p>
@@ -566,7 +629,7 @@ export default function Home() {
         <section
           id="contact"
           aria-label="Contact Flippo Land and Wildlife Solutions"
-          className="bg-forest-950 py-20 text-white lg:py-28"
+          className="relative bg-forest-950 py-20 text-white lg:py-28 grain-overlay"
         >
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="grid gap-16 lg:grid-cols-[1fr_1.15fr] lg:gap-20">

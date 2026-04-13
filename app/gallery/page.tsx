@@ -254,7 +254,7 @@ export default function GalleryPage() {
                 href="/#contact"
                 className="bg-amber-500 px-8 py-3.5 text-sm font-bold text-forest-950 transition hover:bg-amber-400"
               >
-                Get a Free Consultation
+                Start a Conversation
               </a>
               <a
                 href="tel:8706790131"
