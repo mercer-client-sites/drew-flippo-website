@@ -228,9 +228,9 @@ export default function Home() {
               <div className="h-px flex-1 bg-white/10" />
             </div>
 
-            {/* Main hero content — offset grid for asymmetry */}
-            <div className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:py-28">
-              <div>
+            {/* Main hero content */}
+            <div className="py-16 sm:py-20 lg:py-28">
+              <div className="max-w-3xl">
                 <h1 className="font-heading text-5xl leading-[1.08] sm:text-6xl lg:text-7xl xl:text-[5rem]">
                   Habitat management
                   <br />
@@ -257,36 +257,6 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-
-              {/* Right column — stacked stats, pulled down */}
-              <div className="hidden lg:flex flex-col gap-5 border-l border-white/10 pl-10">
-                {[
-                  { value: "7", label: "Service Areas" },
-                  { value: "AR", label: "Statewide Coverage" },
-                  { value: "TSI", label: "Timber Improvement" },
-                  { value: "GTR", label: "Flooded Timber Builds" },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <div className="font-heading text-2xl font-bold text-amber-400">{s.value}</div>
-                    <div className="mt-0.5 text-[11px] font-semibold tracking-[0.15em] text-white/35 uppercase">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile stats bar */}
-            <div className="grid grid-cols-2 gap-px border-t border-white/10 sm:grid-cols-4 lg:hidden">
-              {[
-                { value: "7", label: "Service Areas" },
-                { value: "AR", label: "Statewide Coverage" },
-                { value: "TSI", label: "Timber Improvement" },
-                { value: "GTR", label: "Flooded Timber Builds" },
-              ].map((s) => (
-                <div key={s.label} className="py-6 pr-6 first:pt-6">
-                  <div className="font-heading text-2xl font-bold text-amber-400">{s.value}</div>
-                  <div className="mt-1 text-[11px] font-semibold tracking-[0.15em] text-white/35 uppercase">{s.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -404,13 +374,8 @@ export default function Home() {
 
             {/* Services list — editorial rows, not a card grid */}
             <div className="divide-y divide-earth-100 border-t border-earth-100">
-              {services.map((service, i) => (
-                <div key={service.slug} className="group grid gap-6 py-8 sm:grid-cols-[2rem_1fr_1.4fr] sm:gap-10 lg:gap-16">
-                  {/* Number */}
-                  <div className="hidden text-[11px] font-bold tracking-[0.15em] text-earth-800/25 sm:block pt-0.5">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-
+              {services.map((service) => (
+                <div key={service.slug} className="group grid gap-6 py-8 sm:grid-cols-[1fr_1.4fr] sm:gap-10 lg:gap-16">
                   {/* Title + abbr */}
                   <div>
                     <h3 className="text-base font-bold text-forest-900 leading-snug">

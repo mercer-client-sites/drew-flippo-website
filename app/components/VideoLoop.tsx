@@ -52,14 +52,6 @@ export default function VideoLoop() {
           <source src={current.src} type="video/mp4" />
         </video>
         <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.4)]" />
-
-        {/* Current label */}
-        <div className="absolute bottom-4 left-4 flex items-center gap-3 bg-forest-950/70 backdrop-blur-sm px-3 py-1.5 border border-white/10">
-          <span className="inline-block w-1.5 h-1.5 bg-amber-400 animate-pulse" />
-          <span className="text-[10px] font-bold tracking-[0.25em] text-white uppercase">
-            {current.label}
-          </span>
-        </div>
       </div>
 
       {/* Track / indicator row */}
