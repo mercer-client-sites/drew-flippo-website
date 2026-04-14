@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Image from 'next/image'
+import VideoLoop from './components/VideoLoop'
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 
@@ -311,27 +312,8 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Video area */}
-              <div className="space-y-6">
-                <div className="relative aspect-video w-full overflow-hidden bg-forest-950 border border-white/8">
-                  {/* Replace src with your actual video file */}
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="absolute inset-0 h-full w-full object-cover"
-                  >
-                    {/* TODO: Replace with real footage */}
-                    <source src="/images/gallery/trapping/trapping-hero.mov" type="video/mp4" />
-                  </video>
-                  {/* Subtle vignette */}
-                  <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.4)]" />
-                </div>
-                <p className="text-[11px] font-semibold tracking-[0.2em] text-white/25 uppercase">
-                  Habitat management &middot; Arkansas
-                </p>
-              </div>
+              {/* Video area — sequentially plays multiple clips */}
+              <VideoLoop />
             </div>
           </div>
         </section>
