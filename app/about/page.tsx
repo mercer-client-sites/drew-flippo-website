@@ -162,7 +162,7 @@ export default function AboutPage() {
                 <h1 className="font-heading text-6xl leading-[1.04] sm:text-7xl lg:text-[5.5rem]">
                   Drew
                   <br />
-                  <span className="text-amber-400">Flippo.</span>
+                  <span className="text-amber-400">Flippo</span>
                 </h1>
                 <p className="mt-6 text-[1.0625rem] leading-[1.75] text-white/55 max-w-xl">
                   Wildlife-focused land manager. Founder of Flippo Land &amp; Wildlife Solutions.
