@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Image from 'next/image'
+import Link from 'next/link'
 import VideoLoop from './components/VideoLoop'
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
@@ -28,21 +29,6 @@ function IconCheck() {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5 flex-shrink-0">
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
     </svg>
-  );
-}
-
-// ── Image placeholder ─────────────────────────────────────────────────────────
-
-function ImgBlock({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div className={`flex flex-col items-center justify-center gap-3 select-none bg-earth-200 text-earth-800/25 ${className}`}>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={0.75} className="w-8 h-8">
-        <rect x="3" y="3" width="18" height="18" rx="1" />
-        <circle cx="8.5" cy="8.5" r="1.5" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 15l-5-5L5 21" />
-      </svg>
-      <span className="text-[10px] font-semibold tracking-[0.2em] uppercase">{label}</span>
-    </div>
   );
 }
 
@@ -156,7 +142,7 @@ export default function Home() {
       {/* ── Header ────────────────────────────────────────────────────────── */}
       <header className="sticky top-0 z-50 bg-forest-950 border-b border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
-          <a href="/" className="flex items-center gap-3 leading-none">
+          <Link href="/" className="flex items-center gap-3 leading-none">
             <Image
               src="/images/logo-crest-light.png"
               alt=""
@@ -171,7 +157,7 @@ export default function Home() {
                 Land &amp; Wildlife Solutions
               </span>
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
@@ -309,7 +295,15 @@ export default function Home() {
 
               {/* Image — offset slightly for asymmetry */}
               <div className="lg:-mt-4 lg:mr-4">
-                <ImgBlock label="Field Photo" className="aspect-[4/3] w-full" />
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-earth-200">
+                  <Image
+                    src="/images/gallery/burns/IMG_6475.jpeg"
+                    alt="Field work on Arkansas habitat management property"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                </div>
               </div>
 
               {/* Text */}
@@ -595,13 +589,13 @@ export default function Home() {
               <div>
                 <p className="text-[10px] font-bold tracking-[0.3em] text-amber-500 uppercase mb-5">Contact</p>
                 <h2 className="font-heading text-4xl leading-[1.12] sm:text-5xl">
-                  Let's talk about
+                  Let&apos;s talk about
                   <br />
                   your property
                 </h2>
                 <p className="mt-6 text-[0.9375rem] leading-[1.8] text-white/50">
                   Every project starts with a conversation. Tell us about your
-                  land and what you're trying to build, and we'll put together
+                  land and what you&apos;re trying to build, and we&apos;ll put together
                   a plan that fits.
                 </p>
 
