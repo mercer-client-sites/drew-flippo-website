@@ -156,10 +156,20 @@ export default function Home() {
       {/* ── Header ────────────────────────────────────────────────────────── */}
       <header className="sticky top-0 z-50 bg-forest-950 border-b border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
-          <a href="/" className="flex flex-col leading-none">
-            <span className="font-heading text-xl tracking-[0.15em] text-white uppercase">Flippo</span>
-            <span className="text-[9px] font-bold tracking-[0.3em] text-amber-500/70 uppercase mt-0.5">
-              Land &amp; Wildlife Solutions
+          <a href="/" className="flex items-center gap-3 leading-none">
+            <Image
+              src="/images/logo-crest-light.png"
+              alt=""
+              width={372}
+              height={152}
+              priority
+              className="h-10 w-auto"
+            />
+            <span className="flex flex-col">
+              <span className="font-heading text-xl tracking-[0.15em] text-white uppercase">Flippo</span>
+              <span className="text-[9px] font-bold tracking-[0.3em] text-amber-500/70 uppercase mt-0.5">
+                Land &amp; Wildlife Solutions
+              </span>
             </span>
           </a>
 
@@ -738,6 +748,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="sm:col-span-2 lg:col-span-1">
+              <Image
+                src="/images/logo-crest-light.png"
+                alt="Flippo Land & Wildlife Solutions"
+                width={372}
+                height={152}
+                className="mb-4 h-14 w-auto"
+              />
               <div className="mb-3 flex flex-col leading-none">
                 <span className="font-heading text-lg tracking-[0.15em] text-white uppercase">Flippo</span>
                 <span className="text-[9px] font-bold tracking-[0.28em] text-amber-500/50 uppercase mt-0.5">
