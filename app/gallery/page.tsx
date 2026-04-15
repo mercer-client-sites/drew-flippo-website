@@ -204,7 +204,7 @@ export default function GalleryPage() {
               <h1 className="font-heading text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">
                 Results on
                 <br />
-                <span className="text-amber-400">the ground.</span>
+                <span className="text-amber-400">the ground</span>
               </h1>
               <p className="mt-6 max-w-xl text-[1.0625rem] leading-[1.75] text-white/55">
                 From prescribed burns to timber stand improvement — real work on real properties across Arkansas.

@@ -244,7 +244,7 @@ export default function Home() {
                 <h1 className="font-heading text-5xl leading-[1.08] sm:text-6xl lg:text-7xl xl:text-[5rem]">
                   Habitat management
                   <br />
-                  <span className="text-amber-400">built around your property.</span>
+                  <span className="text-amber-400">built around your property</span>
                 </h1>
                 <p className="mt-7 max-w-2xl text-base leading-[1.8] text-white/55 sm:text-[1.0625rem]">
                   Flippo Land and Wildlife Solutions works with Arkansas landowners
@@ -285,7 +285,7 @@ export default function Home() {
                 <h2 className="font-heading text-3xl leading-[1.12] sm:text-4xl">
                   Our work
                   <br />
-                  in the field.
+                  in the field
                 </h2>
                 <p className="mt-4 text-[0.8125rem] leading-relaxed text-white/40">
                   Real footage from real properties. This is what habitat management looks like on the ground.
@@ -318,7 +318,7 @@ export default function Home() {
                 <h2 className="font-heading text-4xl leading-[1.12] text-forest-900 sm:text-5xl">
                   We care about what
                   <br />
-                  happens to your land.
+                  happens to your land
                 </h2>
 
                 <div className="mt-7 space-y-5 text-[0.9375rem] leading-[1.85] text-earth-800/70">
@@ -501,7 +501,7 @@ export default function Home() {
               <h2 className="font-heading text-4xl leading-[1.12] text-forest-900 sm:text-5xl">
                 A clear process,
                 <br />
-                from start to finish.
+                from start to finish
               </h2>
               <p className="mt-5 text-[0.9375rem] leading-relaxed text-earth-800/60">
                 We believe you should know exactly what to expect at every stage.
@@ -597,7 +597,7 @@ export default function Home() {
                 <h2 className="font-heading text-4xl leading-[1.12] sm:text-5xl">
                   Let's talk about
                   <br />
-                  your property.
+                  your property
                 </h2>
                 <p className="mt-6 text-[0.9375rem] leading-[1.8] text-white/50">
                   Every project starts with a conversation. Tell us about your

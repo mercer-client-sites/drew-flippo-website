@@ -216,7 +216,7 @@ export default function AboutPage() {
                 <h2 className="font-heading text-3xl leading-[1.15] text-forest-900 sm:text-4xl">
                   A career built
                   <br />
-                  in the field.
+                  in the field
                 </h2>
                 <div className="mt-8 border-t border-earth-200 pt-8 space-y-3">
                   <div className="text-[11px] font-bold tracking-[0.2em] text-earth-800/35 uppercase">Quick facts</div>
@@ -283,7 +283,7 @@ export default function AboutPage() {
             <div className="mb-12">
               <p className="text-[10px] font-bold tracking-[0.3em] text-amber-600 uppercase mb-4">Background</p>
               <h2 className="font-heading text-4xl leading-[1.12] text-forest-900 sm:text-5xl">
-                The foundation behind the work.
+                The foundation behind the work
               </h2>
             </div>
 
@@ -311,7 +311,7 @@ export default function AboutPage() {
                 <h2 className="font-heading text-4xl leading-[1.12] sm:text-5xl">
                   Personally involved,
                   <br />
-                  start to finish.
+                  start to finish
                 </h2>
                 <p className="mt-7 text-[0.9375rem] leading-[1.85] text-white/55 max-w-lg">
                   Every project I take on gets the same level of attention — whether it's a
